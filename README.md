@@ -11,33 +11,24 @@ Atualmente possuo algumas certificações sobre a tecnologia, caso queira consul
 
 ## Indíces
 
-#### Principais comandos
+#### Conceitos
 
-* [git init](#gitinit)
-* [git config](#gitconfig)
-* [git status](#gitstatus)
-* [git log](#gitlog)
-* [git add](#gitadd)
-* [git rm](#gitrm)
-* [git mv](#gitmv)
-* [git commit](#gitcommit)
-* [git reset](#gitreset)
-* [git revert](#gitrevert)
-* [git push](#gitpush)
-* [git remote](#gitremote)
-* [git pull](#gitpull)
-* [git branch](#gitbranch)
-* [git checkout](#gitcheckout)
-* [git switch](#gitswitch)
-* [git restore](#gitrestore)
-* [git merge](#gitmerge)
-* [git rebase](#gitrebase)
-* [git diff](#gitdiff)
-* [git clone](#gitclone)
+* [1. O que é git?]()
+* [2. O que é gitflow?]()
+
+#### Principais comandos
+| <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | 
+| :------:|:-----:| :------:| :-------:|:------:|:-----:| :------:| :-------:|
+| [git init](#gitinit) | [git config](#gitconfig) 	| [git status](#gitstatus) |  [git log](#gitlog) |  [git add](#gitadd) |  [git rm](#gitrm) | [git mv](#gitmv) | [git commit](#gitcommit) |
+| [git reset](#gitreset) | [git revert](#gitrevert) | [git push](#gitpush) | [git remote](#gitremote) | [git pull](#gitpull) | [git branch](#gitbranch) | [git checkout](#gitcheckout) | [git switch](#gitswitch) |
+| [git restore](#gitrestore) | [git merge](#gitmerge) | [git rebase](#gitrebase) | [git diff](#gitdiff) | [git clone](#gitclone) |
  
 <div id='gitinit'/>
 
 ## git init
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Este comando cria um repositório Git vazio, basicamente um diretório .git com subdiretórios para os arquivos objects, refs/heads, refs/tags e arquivos modelo. Também é criado um arquivo inicial HEAD que tem como referencia o HEAD do ramo principal.*
@@ -52,9 +43,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git init | Cria um repositório do Git com funcionalidade completa. 	|
 | git init &lt;Diretório&gt; | Cria um repositório do Git vazio no diretório especificado.	|
 
+</details>
+
 <div id='gitconfig'/>
 
 ## git config
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Você pode consultar, definir, substituir e remover opções com este comando. Na verdade o nome é a seção e a chave são separadas por um ponto, e seu valor será escapado.*
@@ -71,10 +67,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git config --global user.name &lt;Usuário&gt;| Adiciona seu nome de usuário globalmente, ou seja, altera o usuário padrão do Git na máquina. 	|
 | git config --global user.email &lt;Email&gt; | Adiciona seu email de usuário globalmente, ou seja, altera o email de usuário padrão do Git na máquina. 	|
 
+</details>
 
 <div id='gitstatus'/>
 
 ## git status
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Exibe os caminhos que têm diferenças entre o arquivo do índice e o commit atual no HEAD, os caminhos que têm diferenças entre a árvore de trabalho e o arquivo do índice, os caminhos na árvore de trabalho que não são rastreados pelo Git (e não foram ignorados pelo gitignore).*
@@ -89,9 +89,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git status | Exibe a condição da árvore de trabalho. 	|
 | git status -s | Saída em formato curto. 	|
 
+</details>
+
 <div id='gitlog'/>
 
 ## git log
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Exibe os registros log do commit.*
@@ -108,9 +113,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git log --parents| Adiciona o hash do commit pai na exibição. 	| Commits gerados pelo comando merge possuem dois commits pais. |
 | git log --decorate| Exibe histórico de alterações padrão. 	| Exibe quais commits as branches e a HEAD estão apontando (padrão desde a versão 2.12.2 do git). |
 
+</details>
+
 <div id='gitadd'/>
 
 ## git add
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Este comando atualiza o índice utilizando o conteúdo atual encontrado na árvore de trabalho para preparar o conteúdo para o próximo commit. Em geral ele adiciona o conteúdo atual dos caminhos existentes como um todo, mas com algumas opções ele também pode ser utilizado para adicionar o conteúdo com apenas a parte das alterações aplicadas nos arquivos da árvore de trabalho ou remover os caminhos que não existam mais na árvore de trabalho.
@@ -126,9 +136,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git add . | Adiciona todos os arquivos com alteração ao stage 	| Na primeira execução inicia o rastreio dos arquivos |
 | git add &lt;Arquivo&gt; | Adiciona o arquivo ao stage 	| Na primeira execução inicia o rastreio do arquivo |
 
+</details>
+
 <div id='gitrm'/>
 
 ## git rm
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Remove os arquivos correspondentes ao pathspec do índice, ou da árvore de trabalho e do índice. O comando git rm não removerá um arquivo apenas do seu diretório de trabalho.*
@@ -142,9 +157,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | ------|:-----:|
 | git rm &lt;Arquivo&gt; | Remove o arquivo do diretório. 	|
  
+</details> 
+ 
 <div id='gitmv'/>
 
 ## git mv
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Mova ou renomeie um arquivo, diretório ou link simbólico.*
@@ -171,9 +191,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git mv &lt;Arquivo Renomear&gt; &lt;Arquivo Renomeado&gt; | Renomea o arquivo, diretório ou link 	| |
 | git mv &lt;Origem&gt; &lt;Destino&gt; | Move o arquivo, diretório ou link 	| O parâmetro de origem deve conter o que será movido, e o parâmetro de destino deve conter o parâmetro de origem |
 
+</details>
+
 <div id='gitcommit'/>
 
 ## git commit
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Cria um novo commit que tenha todos os conteúdos atuais do índice e a mensagem informada no registro log descrevendo as alterações. Um novo commit é um herdeiro direto do HEAD que em geral é o topo do ramo atual e o ramo é atualizado para apontar para ele.*
@@ -190,9 +215,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git commit &lt;Arquivo&gt; -m "mensagem" | Cria um instantâneo com as alterações do respectivo arquivo. 	| As alterações do arquivo não precisa estar na área de stage mas é necessário que o arquivo seja rastreado pelo Git.  |
 | git commit -a -m "mensagem" | Permite commitar as alterações que ainda não estão na área de stage. 	| |
 
+</details>
+
 <div id='gitreset'/>
 
 ## git reset
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Esses formulários redefinem as entradas do índice para todos os caminhos correspondentes ao &lt;pathspec&gt; à sua condição em &lt;tree-ish&gt;. (Isso não afeta a árvore de trabalho ou a ramificação atual.)
@@ -210,9 +240,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git reset --hard | Descarta todas as mudanças nos arquivos, retira todos os arquivos da área de stage e desfaz todas as alterações nesses arquivos. 	|   |
 | git reset --hard HEAD| Além de reverter as alterações, retorna aos arquivos que tinha no HEAD. 	| Recomendo fortemente a leitura do [seguinte artigo](https://devconnected.com/how-to-git-reset-to-head/#:~:text=To%20hard%20reset%20files%20to,option%20and%20specify%20the%20HEAD.&text=The%20purpose%20of%20the%20%E2%80%9Cgit,before%20HEAD%20and%20so%20on).  |
 
+</details>
+
 <div id='gitrevert'/>
 
 ## git revert
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Dado um ou mais commits já existentes, reverta as alterações introduzidas pelos patches relacionados e registre alguns novos commits que registram neles. Isso requer que a sua árvore de trabalho esteja limpa (nenhuma alteração a partir do commit HEAD).*
@@ -227,9 +262,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git revert | Desfaz todas as alterações no repositório. 	| | 
 | git revert --no-edit | Desfaz todas as alterações no repositório. 	| Não inicia o editor de mensagens do commit. | 
  
+</details> 
+ 
 <div id='gitpush'/>
 
 ## git push
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Atualiza as refs remotas utilizando as refs locais, enquanto envia os objetos necessários para que seja concluída as refs informadas.*
@@ -243,9 +283,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | ------|:-----:| :-----:|
 | git push &lt;Nome Conexão&gt; &lt;Nome Branch&gt; | Envia o conteúdo da branch para o repositório da conexão. 	| Cria a branch caso não exista no repositório remoto. |
 
+</details>
+
  <div id='gitremote'/>
 
 ## git remote
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Gerencie o conjunto de repositórios ("remotos") cujos ramos você monitora.*
@@ -265,11 +310,15 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git remote -r | Exibe as branches remotas. 	| |
 | git remote -a | Exibe as branches remotas e locais. 	| |
 | git remote -r -v | Lista para quais commits as branches remotas estão apontando. 	| |
- 
+
+</details>
  
 <div id='gitpull'/>
 
 ## git pull
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Incorpora as alterações de um repositório remoto no ramo atual. Em seu modo predefinido, o comando git pull é uma abreviação do comando git fetch seguido por git merge FETCH_HEAD.
@@ -287,14 +336,19 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git pull --no-commit &lt;Nome Conexão&gt;  | Baixa e atualiza a branch atual no repositório local. 	| Não cria um commit de merge |
 | git pull --rebase &lt;Nome Conexão&gt;  | Baixa e atualiza a branch atual no repositório local. 	| Em vez de usar git merge para a atualização do repositório local, utiliza o git rebase. |
  
+ </details>
+ 
  <div id='gitbranch'/>
 
 ## git branch
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Lista, cria ou exclui ramificações.*
 
-explicação do código.
+Comando utilizado para exibir, criar ou excluir branches. As branches permitem trabalhar distintamente utilizando um commit em especifíco como base, ou seja, pode-se trabalhar a parte à partir do código sem afetar o código de origem (normalmente a master).
 
 Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.com/docs/git-branch/pt_BR)
 
@@ -306,9 +360,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git branch &lt;Nome Branch&gt; | Cria uma nova branch. 	| |
 | git branch -d &lt;Nome Branch&gt; | Excluí a branch informada. 	| Não é possível excluir com -d uma branch que possua commits não aplicados em outras branches. |
  
+</details> 
+ 
 <div id='gitcheckout'/>
 
 ## git checkout
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Atualiza os arquivos na árvore de trabalho para coincidir com a versão no índice ou na árvore informada. Se nenhum "pathspec" seja utilizado, o comando git checkout também atualizará o HEAD para definir o ramo informado como o ramo atual.*
@@ -324,9 +383,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git checkout -b &lt;Nome Branch&gt; | Cria e muda a branch atual para a especificada.	| |
 | git checkout -- &lt;Arquivo&gt; | Restaura o arquivo. 	| Desfaz somente as alterações que não estão na área de stage. Caso exista alguma alteração dentro da área de stage, essa alteração não será desfeita. |
  
+</details> 
+ 
 <div id='gitswitch'/>
 
 ## git switch
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Alterna para um ramo específico. A árvore de trabalho e o índice são atualizados para coincidir com o ramo. Todos os novos commits serão adicionadas ao cume deste ramo.*
@@ -341,9 +405,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git switch &lt;Nome Branch&gt; | Muda a branch atual para a especificada. 	|
 | git switch -c &lt;Nome Branch&gt; | Cria e muda a branch atual para a especificada. 	|
 
+</details>
+
 <div id='gitrestore'/>
 
 ## git restore
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Restaure os caminhos definidos na árvore de trabalho com algum conteúdo de uma fonte de restauração. Se um caminho for monitorado, porém não existir na fonte de restauração, ele será removido para coincidir com a fonte.*
@@ -359,9 +428,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git restore -- &lt;Nome Arquivo&gt; | Restaura o arquivo que está visível (working tree) para o do commit apontado pelo HEAD. 	|  |
 | git restore -- &lt;Nome Arquivo1&gt; &lt;Nome Arquivo2&gt; | Restaura os arquivos que está visível (working tree) para o do commit apontado pelo HEAD. 	| Quantidade de arquivos indefinidos.  |
 
+</details>
+
 <div id='gitmerge'/>
 
 ## git merge
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Incorpora as alterações dos commits citados (desde o momento em que os seus históricos divergirem do ramo atual) para dentro do ramo atual. Este comando é utilizado pelo git pull para incorporar as alterações vindos de outro repositório e pode ser utilizado manualmente para mesclar as alterações do outro ramo para um outro.*
@@ -380,9 +454,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git merge &lt;Branch Alvo&gt; | Mescla os commits da branch especificada na branch atual. 	| A branch especificada não sofre alterações. |
 | git merge --no-ff &lt;Branch Alvo&gt; | Mescla os commits da branch especificada na branch atual.	| Obrigatoriamente gera um commit de mesclagem. |
 
+</details>
+
 <div id='gitrebase'/>
 
 ## git rebase
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Caso o &lt;ramo&gt; seja utilizado, o comando git rebase executará um git switch &lt;ramo&gt; automaticamente antes de fazer qualquer outra coisa. Caso contrário, ele permanecerá no ramo atual.*
@@ -399,9 +478,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git rebase &lt;Branch alvo&gt; | Reaplica os commits da branch alvo na branch atual. 	| A branch alvo se mantém intacta. |
 | git rebase --interactive &lt;Branch alvo&gt; | Reaplica os commits da branch alvo na branch atual. 	| Abre uma sessão interativa com mais opções de configurações do rebase. |
  
+</details> 
+ 
 <div id='gitdiff'/>
 
 ## git diff
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Exibe as alterações entre a árvore de trabalho, o índice ou uma árvore, as alterações entre o índice e uma árvore, as alterações entre as duas árvores, nas alterações resultantes de uma mesclagem, nas alterações entre dois objetos gota ou nas alterações entre dois arquivos no disco.*
@@ -422,9 +506,14 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | git diff &lt;Commit1&gt;..&lt;Commit2&gt; | Exibe as mudanças comitadas realizadas a partir do commit1 até o commit2. 	| Dado que é mostrado as linhas (-) e (+) necessárias para converter o commit1 no próximo commit, e assim sucessivamente até o commit2, a inversão da ordem dos commits gera a inversão dos sinais (-) e (+) dos resultados. | 
 | git diff &lt;Commit&gt;~n | Exibe as mudanças nos arquivos do commit inserido como parâmetro em relação aos n commits realizados imediatamente antes. 	| Inclui mudanças não comitadas, sejam elas fora ou dentro da área de stage. | 
  
+</details> 
+ 
 <div id='gitclone'/>
 
 ## git clone
+<details>
+
+<summary> Conteúdo: </summary>
 De acordo com a documentação do git :
 
 >*Clona um repositório em um diretório recém-criado, cria o monitoramento remoto dos ramos para cada ramo no repositório clonado (visível utilizando git branch --remotes), cria e verifica um ramo inicial que é bifurcado do ramo ativo atualmente do repositório clonado.*
@@ -437,6 +526,8 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 | Código     | Resultado | Observações
 | ------|:-----:| :-----:|
 | git pull &lt;URL&gt; | Cria um repositório local idêntico ao repositório da URL especificada 	| |
+
+</details>
 
 <div id='certificacoes'/>
 
