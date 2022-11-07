@@ -13,8 +13,9 @@ Atualmente possuo algumas certificações sobre a tecnologia, caso queira consul
 
 #### Conceitos
 
-* [1. O que é git?]()
-* [2. O que é gitflow?]()
+* [1. O que é git?](#oqueegit)
+* [2. O que é gitflow?](#oqueegitflow)
+* [3. O que é desenvolvimento baseado em troncos?](#oqueetroncos)
 
 #### Principais comandos
 | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | 
@@ -23,9 +24,29 @@ Atualmente possuo algumas certificações sobre a tecnologia, caso queira consul
 | [git reset](#gitreset) | [git revert](#gitrevert) | [git push](#gitpush) | [git remote](#gitremote) | [git pull](#gitpull) | [git branch](#gitbranch) | [git checkout](#gitcheckout) | [git switch](#gitswitch) |
 | [git restore](#gitrestore) | [git merge](#gitmerge) | [git rebase](#gitrebase) | [git diff](#gitdiff) | [git clone](#gitclone) |
  
+<div id='oqueegit'/>
+
+## 1. O que é git? 
+
+O Git possui a função de registrar quaisquer alterações realizadas em um código, armazenando essas informações e permitindo que, caso necessário, um(a) programador(a) possa recuperar a versão anterior de uma aplicação de modo simples e rápido. Além disso, o Git facilita o processo de compartilhamento de código entre um time, e aliado a seu desempenho, segurança e flexbilidade, se tornou atualmente o sistema de controle de versão mais usado no mundo.
+
+Dado que o git possui uma arquitetura distribuída, ele é um exemplo de DVCS (Sistema de Controle de Versão Distribuída). Portanto, em vez de possuir apenas um único local para o histórico completo da versão do software, como era comum em sistemas de controle de versão antes populares, a cópia de trabalho de todo desenvolvedor do código também é um repositório que pode conter o histórico completo de todas as alterações do projeto.
+
+
+
+<div id='oqueegitflow'/>
+
+## 2. O que é gitflow? 
+
+<div id='oqueetroncos'/>
+
+## 3. O que é desenvolvimento baseado em troncos?
+
+## Comandos
+
 <div id='gitinit'/>
 
-## git init
+### git init
 <details>
 
 <summary> Conteúdo: </summary>
@@ -47,7 +68,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
 <div id='gitconfig'/>
 
-## git config
+### git config
 <details>
 
 <summary> Conteúdo: </summary>
@@ -71,7 +92,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
 <div id='gitstatus'/>
 
-## git status
+### git status
 <details>
 
 <summary> Conteúdo: </summary>
@@ -93,7 +114,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
 <div id='gitlog'/>
 
-## git log
+### git log
 <details>
 
 <summary> Conteúdo: </summary>
@@ -117,7 +138,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
 <div id='gitadd'/>
 
-## git add
+### git add
 <details>
 
 <summary> Conteúdo: </summary>
@@ -140,7 +161,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
 <div id='gitrm'/>
 
-## git rm
+### git rm
 <details>
 
 <summary> Conteúdo: </summary>
@@ -161,7 +182,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
  
 <div id='gitmv'/>
 
-## git mv
+### git mv
 <details>
 
 <summary> Conteúdo: </summary>
@@ -195,7 +216,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
 <div id='gitcommit'/>
 
-## git commit
+### git commit
 <details>
 
 <summary> Conteúdo: </summary>
@@ -219,7 +240,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
 <div id='gitreset'/>
 
-## git reset
+### git reset
 <details>
 
 <summary> Conteúdo: </summary>
@@ -244,7 +265,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
 <div id='gitrevert'/>
 
-## git revert
+### git revert
 <details>
 
 <summary> Conteúdo: </summary>
@@ -266,7 +287,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
  
 <div id='gitpush'/>
 
-## git push
+### git push
 <details>
 
 <summary> Conteúdo: </summary>
@@ -287,7 +308,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
  <div id='gitremote'/>
 
-## git remote
+### git remote
 <details>
 
 <summary> Conteúdo: </summary>
@@ -315,7 +336,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
  
 <div id='gitpull'/>
 
-## git pull
+### git pull
 <details>
 
 <summary> Conteúdo: </summary>
@@ -340,7 +361,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
  
  <div id='gitbranch'/>
 
-## git branch
+### git branch
 <details>
 
 <summary> Conteúdo: </summary>
@@ -364,7 +385,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
  
 <div id='gitcheckout'/>
 
-## git checkout
+### git checkout
 <details>
 
 <summary> Conteúdo: </summary>
@@ -387,7 +408,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
  
 <div id='gitswitch'/>
 
-## git switch
+### git switch
 <details>
 
 <summary> Conteúdo: </summary>
@@ -409,7 +430,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
 <div id='gitrestore'/>
 
-## git restore
+### git restore
 <details>
 
 <summary> Conteúdo: </summary>
@@ -432,7 +453,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
 <div id='gitmerge'/>
 
-## git merge
+### git merge
 <details>
 
 <summary> Conteúdo: </summary>
@@ -458,7 +479,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 
 <div id='gitrebase'/>
 
-## git rebase
+### git rebase
 <details>
 
 <summary> Conteúdo: </summary>
@@ -482,7 +503,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
  
 <div id='gitdiff'/>
 
-## git diff
+### git diff
 <details>
 
 <summary> Conteúdo: </summary>
@@ -510,7 +531,7 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
  
 <div id='gitclone'/>
 
-## git clone
+### git clone
 <details>
 
 <summary> Conteúdo: </summary>
