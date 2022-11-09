@@ -14,7 +14,7 @@ Atualmente possuo algumas certificações sobre a tecnologia, caso queira consul
 #### Conceitos
 
 * [1. O que é git?](#oqueegit)
-* [2. O que é gitflow?](#oqueegitflow)
+* [2. O que é Git Flow?](#oqueegitflow)
 * [3. O que é desenvolvimento baseado em troncos?](#oqueetroncos)
 
 #### Principais comandos
@@ -36,7 +36,102 @@ Dado que o git possui uma arquitetura distribuída, ele é um exemplo de DVCS (S
 
 <div id='oqueegitflow'/>
 
-## 2. O que é gitflow? 
+## 2. O que é Git Flow? 
+
+O Git Flow é um modelo de ramificação do git, ou seja, é um modo de organizar o versionamento. Esse modelo consiste no uso de recursos e várias ramificações primárias. Além disso, ele dita que tipos de ramificações configurar e como deve ser feito o merge.
+
+No windows você deve instalar o git-flow, sendo o mesmo um invólucro do Git, ou seja, é uma extensão do git. Sua inicialização é feita atráves do comando ```git flow init```, onde o mesmo não faz alterações no repositório, apenas cria as ramificações para você.
+
+### Funcionamento
+
+#### Ramificação de Desenvolvimento e Principal
+
+Esse fluxo de trabalho utiliza duas ramificações para registrar o histórico do projeto, ao invés de uma ramificação (main). Dessa forma, a ramificaçao principal (main) armazena o histórico de lançamentos oficiais, e a ramificação de desenvolvimento (develop) é utilizada como uma ramificação para integração de recursos.
+
+Criando a ramificação de desenvolvimento sem a extensão git-flow:
+
+```git
+   git branch develop
+   git push -u origin develop
+```
+
+Assim, a ramificação develop vai conter o histórico completo do projeto, enquanto que a ramificação main irá armazenar uma versão mais abreviada.
+
+#### Ramificação de Recurso
+
+Cada recurso novo deve ter sua própria ramificação. Entretanto, as ramificações de recursos (feature) devem usar a ramificação de desenvolvimento (develop) como pai em vez da principal (main). 
+
+Ao finalizar um recurso, ele passa para a ramificação de desenvolvimento através de um merge. Observação: Os recursos nunca devem interagir direto com a ramificação main.
+
+Criando a ramificação de recurso sem a extensão git-flow:
+
+```git
+   git checkout develop
+   git checkout -b feature_branch
+```
+
+Finalizando a ramificação de recurso sem a extensão git-flow:
+
+```git
+   git checkout develop
+   git merge feature_branch
+```
+
+#### Ramificação de Lançamento
+
+Quando a ramificação develop recebeu recursos suficientes para um lançamento ou a data de lançamento pre-determinada está se aproximando, você cria uma ramificação de lançamento (release) com a ramificação de desenvolvimento como pai. 
+
+A criação dessa ramificação inicia o próximo ciclo de lançamento, e portanto, nenhum recurso adicional deve ser adicionado após esse ponto. Apenas atualizações de segurança, geração de documentação e tarefas relacionadas ao lançamento devem ir nesta ramificação. 
+
+Quando estiver pronto o lançamento, a ramificação de lançamento passa por merge para a ramificação principal e é marcada com o número de versão. De mesmo modo, ela também deve passar por merge para a ramificação develop. Ao término do lançamento, a ramificação de lançamento deve ser excluída.
+
+A vantagem de utilizar uma ramificação para o preparo do lançamento é a possibilidade de uma equipe aperfeiçoar o lançamento atual enquanto outra continua a trabalhar nos recursos do próximo lançamento.
+
+Criando a ramificação de lançamento sem a extensão git-flow:
+
+```git
+   git checkout develop
+   git checkout -b release/0.1.0
+```
+
+Finalizando a ramificação de lançamento sem a extensão git-flow:
+
+```git
+   git checkout main
+   git merge release/0.1.0
+   git checkout develop
+   git merge release/0.1.0
+   git branch -D release/0.1.0
+```
+
+#### Ramificação de Manutenção
+
+As ramificações de manutenção (hotfix) são utilizadas para corrigir lançamentos de produção com rapidez. A ramificação de manutenção utiliza como pai a ramificação principal, em vez da ramificação de desenvolvimento. Sendo assim, essa é a única ramificação que deve ser bifurcada direto da ramificação principal. Ao término da correção deve ser realizado o merge dela para a ramificação principal e a ramificação de desenvolvimento, além disso, a ramificação principal deve ser marcada com um número de versão atualizado.
+
+A vantagem de utilizar uma ramificação de manutenção é a capacidade da equipe de abordar problemas sem interromper o resto do fluxo de trabalho.
+
+Criando a ramificação de manutenção sem a extensão git-flow:
+
+```git
+   git checkout main
+   git checkout -b hotfix_branch
+```
+
+Finalizando a ramificação de manutenção sem a extensão git-flow:
+
+```git
+   git checkout main
+   git merge hotfix_branch
+   git checkout develop
+   git merge hotfix_branch
+   git branch -D hotfix_branch
+```
+
+### Git Flow x Desenvolvimento baseado em troncos
+
+O Git Flow possui ramificações de vida longa e commits maiores. Portanto, sob esse modelo, os desenvolvedores criam uma ramificação de recurso e retardam o merge com a ramificação principal até o recurso estar completo. Dessa forma, exige mais colaboração para fazer o merge pois se têm um risco maior de se desviarem da ramificação principal.
+
+Assim, o próprio autor do fluxo, Vincent Driessen, não recomenda a uso de Git Flow para projetos que adotem a entrega contínua, pois geralmente o Git Flow gera branches muito longas e elas atrapalham a entrega contínua.
 
 <div id='oqueetroncos'/>
 
