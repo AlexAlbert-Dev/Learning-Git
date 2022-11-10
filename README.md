@@ -137,6 +137,44 @@ Assim, o próprio autor do fluxo, Vincent Driessen, não recomenda a uso de Git 
 
 ## 3. O que é desenvolvimento baseado em troncos?
 
+O desenvolvimento baseado em tronco é um modelo de ramificação do git, ou seja, é um modo de organizar o versionamento. Esse modelo consiste em que os desenvolvedores fazem o merge de atualizações pequenas e frequentes na ramificação principal, chamadas de "troncos".
+
+Esse fluxo de trabalho é uma prática comum entre as equipes de DevOps e faz parte do ciclo de vida de DevOps pois simplifica as fases de merge e integração. Além disso, esse fluxo é obrigatório de CI/CD. 
+
+### Funcionamento
+
+Nesse fluxo os desenvolvedores enviam o código diretamente para o tronco. As alterações feitas nas ramificações das versões costumam ser inseridas de volta no tronco assim que possível. Nos casos em que as versões do software acontecem várias vezes por dia, as ramificações de versões se tornam desnecessárias, pois as alterações podem ser enviadas diretamente ao tronco e implantadas por ele.
+
+A seguir a imagem de um desenvolvimento baseado em troncos:
+
+<img align="center" alt="Pixel-Art" width="100%" src="https://github.com/AlexAlbert-Dev/Learning-Git/blob/27c77e4fb59fbd519e98cbfadd548bd6ae5101d9/DesenvolvimentoBaseadoTronco.svg"/>
+
+#### Relação com CI
+
+A integração contínua (CI) é a combinação do desenvolvimento baseado em troncos e um conjuto de testes rápidos e automatizados que são executados imediatamente após cada implantação no tronco.
+
+Para o CI, é necessário que a demanda seja dividida em pequenos lotes de códigos que são integrados frequentemente visando eliminar integrações longas e as fases de estabilização do código. Dessa forma, é possível garantir que todos saibam o que está sendo feito, e ao mesmo tempo, elimina grandes implantações que podem gerar muito trabalho para outros desenvolvedores ou até os testadores.
+
+Cabe ressaltar que no paradigma de CI, os desenvolvedores que são responsáveis por manter o processo de compilação funcional. Portanto, caso o processo de CI falhe, os desenvolvedores devem corrigir o problema imediatamente ou reverter as alterações caso a correção demore mais que alguns minutos.
+
+#### Implantação
+
+O desenvolvimento baseado em troncos demanda que os desenvolvedores saibam como dividir o trabalho em pequenos lotes. Além disso, as equipes que atingem níveis mais altos de entrega de software e desempenho operacional seguem as seguintes práticas:
+
+* Três ou menos ramificações ativas;
+* Implantar ramificações no tronco pelo menos uma vez ao dia;
+* Evitar congelamentos de códigos e fases de integração.
+
+#### Aprimorando o fluxo
+
+Algumas práticas que resultam em um melhor desenvolvimento baseado em troncos:
+
+* Desenvolvimento em pequenos lotes;
+* Faça revisões síncronas de código;
+* Realize testes automatizados abrangentes;
+* Crie builds rapidamente.
+
+
 ## Comandos
 
 <div id='gitinit'/>
