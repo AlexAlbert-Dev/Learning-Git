@@ -686,4 +686,6 @@ Caso queira consultar a documentação (PT-BR) [clique aqui.](https://git-scm.co
 <div id='certificacoes'/>
 
 ## Minhas certificações sobre o assunto
-[Git e GitHub: Repositório, Commit e Versões (Alura)](https://cursos.alura.com.br/certificate/6f31f8d1-9769-4d4b-996f-034822ac0407)
+[GIT E GITHUB: REPOSITÓRIO, COMMIT E VERSÕES](https://cursos.alura.com.br/certificate/6f31f8d1-9769-4d4b-996f-034822ac0407)
+
+[GIT E GITHUB: CONTROLE E COMPARTILHE SEU CÓDIGO](https://cursos.alura.com.br/certificate/7d47d1b9-881d-49b5-96cc-ba4cc92ac9d4)
